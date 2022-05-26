@@ -10,6 +10,6 @@ class Thematique extends Model
     use HasFactory;
 
     public function risques(){
-        return $this->belongsToMany('App\Risque')->withTimeStamps();
+        return $this->belongsToMany('App\Models\Risque')->withTimeStamps();
     }
 }

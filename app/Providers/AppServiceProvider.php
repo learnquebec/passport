@@ -24,6 +24,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Blade::component('components.thematiques', 'thematiques');
+        Blade::aliasComponent('components.thematiques', 'thematiques');
     }
 }

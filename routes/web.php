@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RisqueThematiqueController;
 use App\Http\Controllers\RisquesController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,10 +21,13 @@ Route::get('/', function () {
 
 Route::resource('risques', RisquesController::class)->only(['index','show','create','store','edit', 'update']);
 
-
+Route::get('/risques/thematique/{id}', [RisqueThematiqueController::class, 'index'])->name('risques.thematiques.index');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
+
+
 
 require __DIR__.'/auth.php';

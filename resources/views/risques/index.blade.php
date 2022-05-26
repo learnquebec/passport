@@ -24,20 +24,20 @@
     <table id="risque_table">
         <thead>
             <th>Id</th>
+            <th>Risque</th>
             <th>Categorie</th>
             <th>Thématiques</th>
-            <th>Risque</th>
             <th></th>
             <th></th>
         </thead>
     @foreach ($risques as $risque)
         <tr>
             <td>{{ $risque->id }}</td>
+            <td>{{ $risque->titre }}</td>
             <td>{{ $risque->categorie->titre }}</td>
             <td>
                 @thematiques(['thematiques' => $risque->thematiques])@endthematiques
             </td>
-            <td>{{ $risque->titre }}</td>
             <td><a href="/risques/{{ $risque->id }}/edit"><button class="btn btn-primary">Edit</button></a></td>
             <td><button class="btn btn-danger">Delete</button></td>
         </tr>

@@ -18,7 +18,8 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             CategorieSeeder::class,
             ThematiqueSeeder::class,
-            RisqueSeederManual::class
+            RisqueSeederManual::class,
+            RisqueThematiqueSeeder::class
         ]);
     }
 }

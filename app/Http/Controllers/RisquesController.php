@@ -22,8 +22,7 @@ class RisquesController extends Controller
     {
        // return view('risques.index');
         return view('risques.index', [
-            'risques' => Risque::with('categorie','thematiques')->get(),
-            'categories'=>Categorie::all()
+            'risques' => Risque::with('categorie','thematiques')->with('thematiques')->get()
         ]);
 
     }

@@ -17,6 +17,9 @@
         @endforeach
     </select>
 </div>
+<div class="mb-3"><h5>Thématiques</h5>
+    @thematiques(['thematiques' => $risque->thematiques])@endthematiques
+</div>
 
 @if($errors->any())
     <div class="is-invalid">
