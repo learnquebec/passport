@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+/* put a capital here */
+
 class DefiGroup extends Model
 {
     use HasFactory;
@@ -14,3 +16,4 @@ class DefiGroup extends Model
         return $this->belongTo("App\Models\Groups");
     }
 }
+
