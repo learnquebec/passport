@@ -42,7 +42,7 @@ class UserSeeder extends Seeder
             'role_id'=>2
         ]);
         DB::table('users')->insert([
-            'id' =>3,
+            'id' =>4,
             'first_name' =>'Etudiant',
             'last_name' =>'Un',
             'email' =>'etudiant1@learnquebec.ca',
@@ -50,7 +50,7 @@ class UserSeeder extends Seeder
             'role_id'=>3
         ]);
         DB::table('users')->insert([
-            'id' =>4,
+            'id' =>5,
             'first_name' =>'Etudiant',
             'last_name' =>'Deux',
             'email' =>'etudiant2@learnquebec.ca',
