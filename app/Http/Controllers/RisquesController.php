@@ -7,6 +7,8 @@ use App\Models\Categorie;
 use App\Models\Risque;
 use App\Models\Thematique;
 
+use Auth;
+
 class RisquesController extends Controller
 {
     public function __construct(Request $request)
@@ -20,10 +22,26 @@ class RisquesController extends Controller
      */
     public function index()
     {
-       // return view('risques.index');
-        return view('risques.index', [
-            'risques' => Risque::with('categorie','thematiques')->with('thematiques')->get()
-        ]);
+        $user = Auth::user();
+ 
+        if($user->role_id == 3){
+            // etudiants
+            return view('risques.student', [
+                'categories' => Categorie::with('risques')->get()
+            ]);
+        }elseif($user->role_id == 2){
+            // enseignant
+        }else{
+            
+            $risque = Risque::get()->first();
+
+            $this->authorize('viewAny', $risque);
+            return view('risques.index', [
+                'risques' => Risque::with('categorie','thematiques')->with('thematiques')->get()
+            ]);
+        }
+
+        
 
     }
 

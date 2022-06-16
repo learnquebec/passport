@@ -1,7 +1,9 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-
-.badge-lg{
-   font-size: 1.0rem; 
+/*
+ @import 'datatables.net-dt';
+*/
+.invalid{
+   color: red;
 }
