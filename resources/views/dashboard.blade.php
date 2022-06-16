@@ -59,7 +59,9 @@
                                     (assignés en utilisant le code de groupe, devons-nous laisser l'enseignant ajouter des élèves)
                                     <ul>
                                         @foreach($group->users as $u)
+                                        @if($u->role_id == 3)
                                         <li><a href="/user/{{ $u->id }}">{{ $u->last_name }}, {{ $u->first_name }}</a></li>
+                                        @endif
                                         @endforeach
                                     </ul>
                                     <a href="/defi"  type="button" class="btn btn-primary mb-4">Ajouter un élève</a>
