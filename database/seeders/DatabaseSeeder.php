@@ -20,7 +20,13 @@ class DatabaseSeeder extends Seeder
             CategorieSeeder::class,
             ThematiqueSeeder::class,
             RisqueSeederManual::class,
-            RisqueThematiqueSeeder::class
+            RisqueThematiqueSeeder::class,
+            GroupSeeder::class,
+            UserGroupSeeder::class,
+            DefiSeeder::class,
+            DefiGroupsSeeder::class,
+            UserRisqueSeeder::class,
+            UserRisqueDoneSeeder::class
         ]);
     }
 }

@@ -20,7 +20,7 @@ class User extends Authenticatable
     }
     public function userRisques()
     {
-        return $this->hasMany(UserRisque::class);
+        return $this->hasMany("App\Models\UserRisque");
     }
     /**
      * The attributes that are mass assignable.
