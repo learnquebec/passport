@@ -9,7 +9,6 @@
                     <div class="container mb-4">
                         
                         <!-- Pivot tables:  user_group, student_group -->
-                        
                         <!-- Pivot tables: defi_risque, defi_etudiant, defi_groupe -->
                         <!-- a href="/risque" type="button" class="btn btn-primary">Ajouter un risque</a -->
                     </div>

@@ -19,7 +19,7 @@ class DashboardController extends Controller
      // dd($categories);
         if($user->role_id == 3){
 
-            return view('dashboardStudent');
+            return view('dashboardStudent', ['user' => $user]);
         }else{
             return view('dashboard', ['user' => $user]);
         }

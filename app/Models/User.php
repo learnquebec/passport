@@ -18,7 +18,10 @@ class User extends Authenticatable
     {
         return $this->belongsToMany('App\Models\Group', "user_group")->withTimestamps();
     }
-
+    public function userRisques()
+    {
+        return $this->hasMany(UserRisque::class);
+    }
     /**
      * The attributes that are mass assignable.
      *
